@@ -1,0 +1,7 @@
+{
+    "public": false,
+    "baseUri": "https://localhost:9090",
+    "name": "Dev: VSTS Compliancy Widget",
+    "publisher": "geertvdcruijsen",
+    "version": "0.0.5"
+}

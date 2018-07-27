@@ -1,0 +1,1 @@
+GET https://{accountName}.vsrm.visualstudio.com/{project}/_apis/release/releases/{releaseId}?api-version=4.1-preview.6

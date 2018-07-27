@@ -1,0 +1,76 @@
+{
+    "manifestVersion": 1,
+    "id": "xpirit-vsts-compliancy-widget",
+    "version": "0.0.5",
+    "name": "VSTS Compliancy Widget",
+    "scopes": [
+        "vso.work"
+    ],
+    "description": "Compliancy Widget",
+    "publisher": "geertvdcruijsen",
+    "public": false,
+    "icons": {
+        "default": "marketplace/logo.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "Demo"
+    ],
+    "links": {
+        "support": {
+            "uri": "https://github.com/XpiritBV/vsts-compliancy-widget"
+        }
+    },
+    "branding": {
+        "color": "rgb(51,65,133)",
+        "theme": "dark"
+    },
+    "files": [
+        {
+            "path": "img",
+            "addressable": true
+        },
+        {
+            "path": "libs",
+            "addressable": true
+        },
+        {
+            "path": "src",
+            "addressable": true
+        },
+        {
+            "path": "marketplace",
+            "addressable": true
+        }
+    ],
+    "categories": [
+        "Plan and track"
+    ],
+    "contributions": [
+        {
+            "id": "compliancyWidget",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+              "ms.vss-dashboards-web.widget-catalog"
+            ],
+            "properties": {
+              "title": "Compliancy Widget",
+              "name": "Compliancy Widget",
+              "uri": "src/widget.html",
+              "description": "Compliancy Widget",
+              "previewImageUrl": "images/gallery-image.png",
+              "supportedSizes": [
+                {
+                  "rowSpan": 2,
+                  "columnSpan": 2
+                }
+              ],
+              "supportedScopes": [ "project_team" ]
+            }
+          }
+    ]
+}

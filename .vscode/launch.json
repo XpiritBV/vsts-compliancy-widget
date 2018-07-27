@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "https://xpirit.visualstudio.com/Azure-SecurityAsCode/_dashboards/Azure-SecurityAsCode%20Team/b9172e1e-43ff-4efa-9c4f-b7db66bd595e",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "userDataDir": "${workspaceRoot}/out/chrome",
+            "smartStep": true,
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/libs/**/*.js"
+            ]
+        }
+    ]
+}
