@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "q": "^1.5.1",
-    "vss-web-extension-sdk": "^4.125.2",
-    "ts-promise": "^2.0.0"
+    "vss-web-extension-sdk": "^4.125.2"
   }
 }

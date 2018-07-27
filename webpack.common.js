@@ -9,7 +9,7 @@ module.exports = {
     libraryTarget: "amd"
   },
   externals: [
-    /^VSS\/.*/, /^TFS\/.*/, /^q$/
+    /^VSS\/.*/, /^TFS\/.*/, /^q$/,/^ReleaseManagement\/.*/
   ],
   module: {
     rules: [

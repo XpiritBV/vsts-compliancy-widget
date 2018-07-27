@@ -1,7 +1,6 @@
 /// <reference types="vss-web-extension-sdk" />
 
 import * as Q from "q";
-import * as WitExtensionContracts from "TFS/WorkItemTracking/ExtensionContracts";
 import * as WorkItemServices from "TFS/WorkItemTracking/Services";
 import { CompliancyWidget } from "./compliancywidget";
 

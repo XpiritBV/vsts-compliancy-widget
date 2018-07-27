@@ -1,10 +1,12 @@
 {
     "manifestVersion": 1,
     "id": "xpirit-vsts-compliancy-widget",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "name": "VSTS Compliancy Widget",
     "scopes": [
-        "vso.work"
+        "vso.build",
+        "vso.release",
+        "vso.code"
     ],
     "description": "Compliancy Widget",
     "publisher": "geertvdcruijsen",
@@ -57,6 +59,7 @@
             "targets": [
               "ms.vss-dashboards-web.widget-catalog"
             ],
+            "includes": [ "ms.vss-releaseManagement-web.release-service-data-external" ],
             "properties": {
               "title": "Compliancy Widget",
               "name": "Compliancy Widget",
