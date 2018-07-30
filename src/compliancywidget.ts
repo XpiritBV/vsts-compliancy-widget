@@ -1,13 +1,14 @@
 import TFS_Core_Contracts = require("TFS/Core/Contracts");
-import Work_Contracts = require("TFS/Work/Contracts");
-import Work_Client = require("TFS/Work/RestClient");
+import Core_Client = require("TFS/Core/RestClient");
 import System_Contracts = require("VSS/Common/Contracts/System");
 import Service = require("VSS/Service");
 import WebApi_Constants = require("VSS/WebApi/Constants");
+import VstsRestApi = require("VSS/WebApi/RestClient");
 
 import * as BuildServices from "TFS/Build/RestClient";
 import * as ReleaseServices from "ReleaseManagement/Core/RestClient";
 import * as GitServices from "TFS/VersionControl/GitRestClient";
+
 import { Artifact } from "ReleaseManagement/Core/Contracts";
 
 export class CompliancyWidget {
@@ -29,9 +30,10 @@ export class CompliancyWidget {
 			
 			var webcontext = VSS.getWebContext();
 			var project = {
-			name : webcontext.project.name,
-			teamId: webcontext.team.id,
-			id: webcontext.project.id
+				name : webcontext.project.name,
+				teamId: webcontext.team.id,
+				id: webcontext.project.id,
+				uri: webcontext.host.uri
 			};
 
 			//this.renderWidget();
@@ -46,6 +48,12 @@ export class CompliancyWidget {
 				$title.text((artifact as Artifact).definitionReference["branches"].name);
 			}
 
+			// var client = Service.VssConnection
+			// 	.getConnection()
+			// 	.getHttpClient(Core_Client.CoreHttpClient, WebApi_Constants.ServiceInstanceTypes.TFS);
+
+			// var restclient = new VstsRestApi.VssHttpClient(project.uri);
+
 			
 			return this.WidgetHelpers.WidgetStatusHelper.Success();
 		} catch (e) {
@@ -56,6 +64,6 @@ export class CompliancyWidget {
 	private renderWidget() {
 		const $title = $("#title");
 
-		$title.text("test van xpirit!!!");
+		$title.text("test van xpirit!!!!");
 	}
 }
